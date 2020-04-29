@@ -8,7 +8,7 @@ public class MainView {
     public static void main(String[] args) {
         try {
             Game g = new Game();
-            g.initializeNumBoxMapping();
+            g.initialize();
 
             Scanner scanner = new Scanner(System.in);
 

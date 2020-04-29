@@ -17,7 +17,7 @@ public class Player {
         return curPosition;
     }
 
-    public void setCurPosition(int pos) {
-        curPosition = pos;
+    public void setCurPosition(int curPosition) {
+        this.curPosition = curPosition;
     }
 }

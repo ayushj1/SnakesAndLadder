@@ -12,9 +12,10 @@ public class Game {
     // constructor
     public Game() {
         boardPlayers = new ArrayList<Player>();
+        someoneReached100 = false;
     }
     
-    public void initializeNumBoxMapping() {
+    public void initialize() {
         numBoxMapping = new HashMap<Integer, NumberBox>();
         for(int i=0; i<=100; i++) {
             numBoxMapping.put(i, new NumberBox(i));
@@ -85,7 +86,6 @@ public class Game {
 
     public void play() {
         System.out.println("Game Begins");
-        someoneReached100 = false;
         int numRounds = 0;
         while(!someoneReached100) {
             numRounds++;

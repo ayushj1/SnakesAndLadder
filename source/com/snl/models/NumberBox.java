@@ -15,14 +15,14 @@ public class NumberBox {
         this.snakeTail = -1;
     }
 
-    public void setSnake(int tail) {
-        hasSnakeHead = true;
-        snakeTail = tail;
+    public void setSnake(int snakeTail) {
+        this.hasSnakeHead = true;
+        this.snakeTail = snakeTail;
     }
 
-    public void setLadder(int end) {
-        hasLadderStart = true;
-        ladderEnd = end;
+    public void setLadder(int ladderEnd) {
+        this.hasLadderStart = true;
+        this.ladderEnd = ladderEnd;
     }
 
     public boolean doesLadderStart() {
