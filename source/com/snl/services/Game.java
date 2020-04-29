@@ -42,11 +42,7 @@ public class Game {
         boardPlayers.add(new Player(name));
     }
 
-    public int getRandom() {
-        return ((int) (Math.random() * 6) + 1);
-    }
-
-    public int validateMove(int playerPosition, int updatedPosition) {
+    private int validateMove(int playerPosition, int updatedPosition) {
         if(updatedPosition > 100) {
             System.out.print(" (Crosses 100 hence no movement) ");
             return playerPosition;
@@ -67,7 +63,7 @@ public class Game {
         }
     }
 
-    public void movePlayerNBoxes(Player p, int diceRoll) {
+    private void movePlayerNBoxes(Player p, int diceRoll) {
         int playerPosition = p.getCurPosition();
         System.out.print("" + playerPosition + " to ");
         playerPosition = validateMove(playerPosition, playerPosition+diceRoll);
@@ -78,8 +74,8 @@ public class Game {
         p.setCurPosition(playerPosition);
     }
 
-    public void playTurn(Player p) {
-        int diceRoll = getRandom();
+    private void playTurn(Player p) {
+        int diceRoll = DiceRoll.rollDice();
         System.out.print("" + p.getName() + " rolled a " + diceRoll + " and moved from ");
         movePlayerNBoxes(p, diceRoll);
     }
